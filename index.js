@@ -125,7 +125,7 @@ app.get('/*', function (req, res) {
 app.use('/', router)
 
 
-cron.schedule('*/5 * * * *', () => globalFetch());
+cron.schedule('*/15 * * * *', () => globalFetch());
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
