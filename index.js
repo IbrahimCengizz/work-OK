@@ -11,7 +11,7 @@ const {globalFetch} = require("./scrapers/fetchAllData");
 const buildPath = path.join(__dirname, 'client', 'build');
 require('dotenv').config()
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -118,9 +118,9 @@ transporter.sendMail(mail, (err, data) => {
 })
 })
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-});
+// app.get('/*', function (req, res) {
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
 
 app.use('/', router)
 

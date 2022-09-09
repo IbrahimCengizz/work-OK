@@ -264,7 +264,8 @@ async function globalFetch() {
     console.log("page done");
   }
   async function getDates() {
-    const response = await fetch("http://workokdeploy.herokuapp.com/api/dates");
+    const response = await fetch("http://localhost:3001/api/dates");
+    // const response = await fetch("http://workokdeploy.herokuapp.com/api/dates");
     const data = await response.json();
     const dataObj = await Object.values(data);
     for (let i = 0; i < 10; i++) {
